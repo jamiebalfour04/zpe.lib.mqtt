@@ -1,5 +1,4 @@
 
-import java.util.HashMap;
 
 import jamiebalfour.HelperFunctions;
 import jamiebalfour.generic.JBBinarySearchTree;
@@ -10,7 +9,6 @@ import jamiebalfour.zpe.interfaces.ZPEType;
 import jamiebalfour.zpe.exceptions.ZPERuntimeException;
 import jamiebalfour.zpe.interfaces.ZPEPropertyWrapper;
 
-import jamiebalfour.zpe.interfaces.ZPEType;
 import jamiebalfour.zpe.types.ZPEBoolean;
 import org.fusesource.mqtt.client.*;
 
@@ -31,11 +29,6 @@ public class MQTTObject extends ZPEStructure {
   }
 
   public MQTTObject(ZPERuntimeEnvironment z, ZPEPropertyWrapper parent) {
-    super(z, parent, "MQTTObject");
-    addMethods();
-  }
-
-  public MQTTObject(ZPERuntimeEnvironment z, ZPEPropertyWrapper parent, String name) {
     super(z, parent, "MQTTObject");
     addMethods();
   }
