@@ -37,6 +37,8 @@
 
 <pre>
 
+import "zpe.lib.mqtt"
+
 m = new mqtt()
 
 if m.connect("192.168.1.10", 1883, "user", "pass") then
