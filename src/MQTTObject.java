@@ -2,6 +2,7 @@
 
 import jamiebalfour.HelperFunctions;
 import jamiebalfour.generic.JBBinarySearchTree;
+import jamiebalfour.zpe.core.YASSByteCodes;
 import jamiebalfour.zpe.core.ZPERuntimeEnvironment;
 import jamiebalfour.zpe.core.ZPEObject;
 import jamiebalfour.zpe.core.ZPEStructure;
@@ -78,6 +79,11 @@ public class MQTTObject extends ZPEStructure {
       return "connect";
     }
 
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.BOOLEAN_TYPE};
+    }
+
   }
 
   class publish_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
@@ -116,6 +122,11 @@ public class MQTTObject extends ZPEStructure {
 
     public String getName() {
       return "publish";
+    }
+
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.BOOLEAN_TYPE};
     }
 
   }
