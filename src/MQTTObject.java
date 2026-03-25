@@ -6,11 +6,11 @@ import jamiebalfour.zpe.core.YASSByteCodes;
 import jamiebalfour.zpe.core.ZPERuntimeEnvironment;
 import jamiebalfour.zpe.core.ZPEObject;
 import jamiebalfour.zpe.core.ZPEStructure;
-import jamiebalfour.zpe.interfaces.ZPEType;
-import jamiebalfour.zpe.exceptions.ZPERuntimeException;
-import jamiebalfour.zpe.interfaces.ZPEPropertyWrapper;
+import jamiebalfour.zpe.core.interfaces.ZPEType;
+import jamiebalfour.zpe.core.exceptions.ZPERuntimeException;
+import jamiebalfour.zpe.core.interfaces.ZPEPropertyWrapper;
 
-import jamiebalfour.zpe.types.ZPEBoolean;
+import jamiebalfour.zpe.core.types.ZPEBoolean;
 import org.fusesource.mqtt.client.*;
 
 public class MQTTObject extends ZPEStructure {
@@ -34,7 +34,7 @@ public class MQTTObject extends ZPEStructure {
     addMethods();
   }
 
-  class connect_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  class connect_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
 
     @Override
     public String[] getParameterNames() {
@@ -86,7 +86,7 @@ public class MQTTObject extends ZPEStructure {
 
   }
 
-  class publish_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  class publish_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
 
     @Override
     public String[] getParameterNames() {
