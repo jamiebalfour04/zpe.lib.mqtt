@@ -1,6 +1,7 @@
+import jamiebalfour.zpe.core.ZPEModule;
 import jamiebalfour.zpe.core.ZPEStructure;
-import jamiebalfour.zpe.interfaces.ZPECustomFunction;
-import jamiebalfour.zpe.interfaces.ZPELibrary;
+import jamiebalfour.zpe.core.interfaces.ZPECustomFunction;
+import jamiebalfour.zpe.core.interfaces.ZPELibrary;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,6 +19,11 @@ public class Plugin implements ZPELibrary {
     m.put("mqtt", MQTTObject.class);
 
     return m;
+  }
+
+  @Override
+  public Map<String, ZPEModule> getModules() {
+    return new HashMap<>();
   }
 
   @Override

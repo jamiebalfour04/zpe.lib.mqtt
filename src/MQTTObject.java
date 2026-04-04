@@ -13,6 +13,8 @@ import jamiebalfour.zpe.core.interfaces.ZPEPropertyWrapper;
 import jamiebalfour.zpe.core.types.ZPEBoolean;
 import org.fusesource.mqtt.client.*;
 
+import java.util.HashMap;
+
 public class MQTTObject extends ZPEStructure {
   MQTT mqtt = new MQTT();
   BlockingConnection connection = null;
@@ -52,7 +54,7 @@ public class MQTTObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
 
       try {
 
@@ -102,7 +104,7 @@ public class MQTTObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
 
       try {
 
